@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.effortlogger.DefectConsole">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Label layoutX="198.0" layoutY="14.0" text="Defect Console">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="62.0" text="1. Select the Project">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="489.0" layoutY="62.0" text=" 2.a. Clear this Project's Defect Log">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="100.0" layoutY="94.0" prefWidth="150.0" />
+            <ComboBox layoutX="105.0" layoutY="150.0" prefWidth="150.0" />
+            <Label layoutX="74.0" layoutY="134.0" text="2.b. Select one of the following defects to make it the Current Defect or press &quot;Create a new Defect&quot; ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="524.0" layoutY="94.0" mnemonicParsing="false" onAction="#clear" text="Clear this Defect Log" />
+            <Button layoutX="525.0" layoutY="150.0" mnemonicParsing="false" onAction="#newDefect" text="Create a New Defect" />
+            <Label layoutX="74.0" layoutY="176.0" prefHeight="23.0" prefWidth="420.0" text="3. Define or update the following Current Defect attributes:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="200.0" text="Num" />
+            <Label layoutX="535.0" layoutY="192.0" text="Status: " />
+            <Button layoutX="544.0" layoutY="220.0" mnemonicParsing="false" onAction="#close" text="Close" />
+            <Button layoutX="629.0" layoutY="220.0" mnemonicParsing="false" onAction="#reopen" text="Reopen" />
+            <Label layoutX="189.0" layoutY="245.0" text="Defect Symptoms or Cause/Resolution" />
+            <TextArea layoutX="95.0" layoutY="271.0" prefHeight="38.0" prefWidth="535.0" />
+            <Label layoutX="255.0" layoutY="324.0" text="To insert a new line, press &lt;ctrl + option + return&gt;" />
+            <ListView layoutX="70.0" layoutY="395.0" prefHeight="100.0" prefWidth="200.0" />
+            <Label layoutX="170.0" layoutY="200.0" text="Defect Name" />
+            <TextField layoutX="109.0" layoutY="220.0" prefHeight="23.0" prefWidth="409.0" />
+            <ListView layoutX="300.0" layoutY="395.0" prefHeight="100.0" prefWidth="200.0" />
+            <ListView layoutX="552.0" layoutY="395.0" prefHeight="100.0" prefWidth="200.0" />
+            <Label layoutX="74.0" layoutY="361.0" text="Step when injected">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="300.0" layoutY="361.0" text="Step when removed">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="556.0" layoutY="361.0" text="Defect Catagory">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="508.0" text="These attributes have been saved">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="508.0" text="Fix:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="450.0" layoutY="506.0" prefHeight="23.0" prefWidth="281.0" />
+            <Label layoutX="74.0" layoutY="536.0" prefHeight="20.0" prefWidth="574.0" text="4. Press the &quot;Update the Current Defect&quot; to save the changes made above.">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="74.0" layoutY="556.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="179.0" text="Update the Current Defect" />
+            <Button layoutX="289.0" layoutY="556.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="179.0" text="Delete the Current Defect" />
+            <Button layoutX="518.0" layoutY="556.0" mnemonicParsing="false" onAction="#effortLoggerConsole" prefHeight="30.0" prefWidth="215.0" text="Proceed to the Effort Log Console" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
