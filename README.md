@@ -1,1 +1,1 @@
-# effortlogger_cse360
+# effortlogger
