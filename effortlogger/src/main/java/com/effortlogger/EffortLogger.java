@@ -15,10 +15,16 @@ public class EffortLogger extends Application {
     }
     
     public void start(Stage primaryStage) throws IOException {
-    		Parent root = FXMLLoader.load(getClass().getResource("/fxml/console.fxml"));
+        try
+    		{Parent root = FXMLLoader.load(getClass().getResource("/fxml/console.fxml"));
         	Scene scene = new Scene(root, 600, 400);
         	primaryStage.setTitle("EffortLogger");
         	primaryStage.setScene(scene);
         	primaryStage.show();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

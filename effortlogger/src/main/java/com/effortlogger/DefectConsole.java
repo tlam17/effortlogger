@@ -36,7 +36,7 @@ public class DefectConsole {
 	}
 	
 	public void effortLoggerConsole(ActionEvent e) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("console.fxml"));
+		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/console.fxml"));
 		Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
     	Scene scene = new Scene(root, 600, 400);
     	stage.setTitle("EffortLogger");

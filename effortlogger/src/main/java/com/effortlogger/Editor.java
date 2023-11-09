@@ -1,38 +1,43 @@
 package com.effortlogger;
-
-import java.io.IOException;
-
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
 
-public class Editor {
-	
-	public void clear(ActionEvent e) {
-		
+public class Editor implements Initializable {
+
+	@FXML
+	private ChoiceBox<String> projectChoice;
+	@FXML
+	private ChoiceBox<String> categoryChoice;
+	@FXML
+	private ChoiceBox<String> lifeCycleChoice;
+	@FXML
+	private ChoiceBox<String> logChoice;
+	//dummy data
+
+	private String[] projects = {"ProjectDemo1", "ProjectDemo2"};
+
+	private String[] categories = {"CategoryDemo1", "CategoryDemo2"};
+
+	private String[] lifeCycles = {"lifeCycleDemo1", "lifeCycleDemo2"};
+
+	private String[] logs = {"logDemo1", "logDemo2"};
+	//clears all the user inputs 
+	public void clearEntry(ActionEvent event) {
+		projectChoice.setValue("");
+		categoryChoice.setValue("");
+		lifeCycleChoice.setValue("");
+		logChoice.setValue("");
 	}
-	
-	public void update(ActionEvent e) {
-		
-	}
-	
-	public void delete(ActionEvent e) {
-		
-	}
-	
-	public void split(ActionEvent e) {
-		
-	}
-	
-	public void effortLoggerConsole(ActionEvent e) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("/fxml/console.fxml"));
-		Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-    	Scene scene = new Scene(root, 600, 400);
-    	stage.setTitle("EffortLogger");
-    	stage.setScene(scene);
-    	stage.show();
+	@Override
+	//this method is for getting all the data to be in our choice box
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		projectChoice.getItems().addAll(projects);
+		categoryChoice.getItems().addAll(categories);
+		lifeCycleChoice.getItems().addAll(lifeCycles);
+		logChoice.getItems().addAll(logs);
 	}
 }
